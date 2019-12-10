@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=480, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Table</title>
+    <style>
+    #tablita {
+        border-collapse: collapse;
+        width: 800px;
+        margin: 0 auto;
+    }
+
+    #tablita td{
+        border: 1px solid black;
+        max-width: 100px;
+        min-width: 100px;
+    }
+    </style>
+</head>
+<body>
+    <table id="tablita">
+        <thead></thead>
+        <tbody>
+            <tr>
+                <td>Any data</td>
+                <td>Any data</td>
+                <td>Any data</td>
+                <td>Any data</td>
+                <td>Any data</td>
+                <td>Any data</td>
+                <td>Any data</td>
+                <td>Any data</td>
+            </tr>
+            <tr>
+                <td>Any data</td>
+                <td>Any data</td>
+                <td>Any data</td>
+                <td>Any data</td>
+                <td>Any data</td>
+                <td>Any data</td>
+                <td>Any data</td>
+                <td>Any data</td>
+            </tr>
+            <tr>
+                <td>Any data</td>
+                <td>Any data</td>
+                <td>Any data</td>
+                <td>Any data</td>
+                <td>Any data</td>
+                <td>Any data</td>
+                <td>Any data</td>
+                <td>Any data</td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="editTableCell.js"></script>
+    <script>
+        (function(){
+            var table = document.getElementById("tablita");
+            editTableCell(table);
+        })();
+    </script>
+</body>
+</html>
