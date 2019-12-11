@@ -13,9 +13,23 @@
     }
 
     #tablita td{
-        border: 1px solid black;
+        font: 400 13.3333px Arial;
+        border: 1px solid gray;
         max-width: 100px;
         min-width: 100px;
+        height: 20px;
+    }
+
+    #tablita td.selected{
+        border: 3px solid green;
+    }
+
+    #tablita input {
+        border-width: 0;
+    }
+
+    #tablita input:focus {
+        outline-width: 0;
     }
     </style>
 </head>
@@ -55,6 +69,7 @@
             </tr>
         </tbody>
     </table>
+    <button>HACK</button>
     <script src="editTableCell.js"></script>
     <script>
         (function(){
