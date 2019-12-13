@@ -13,68 +13,125 @@
     }
 
     #tablita td{
-        font: 400 13.3333px Arial;
-        border: 1px solid gray;
+        
+        border: 1px solid #D4D4D4;
         max-width: 100px;
         min-width: 100px;
         height: 20px;
     }
 
-    #tablita td.selected{
-        border: 3px solid green;
+    
+
+    #mytable, #my-headers {
+        margin: 0 auto;
+        display: table;
+        border-collapse: collapse;
+    }
+    .mt-lr, .mt-hr {
+        height: 20px;
+        display: table-row;
     }
 
-    #tablita input {
+    .mt-rc {
+        font: normal 11pt Calibri,'Segoe UI',Calibri,Thonburi,Arial,Verdana,Sans-Serif,'Mongolian Baiti','Microsoft Yi Baiti','Javanese Text';
+        border: 1px solid #D4D4D4;
+        display: table-cell;
+        max-width: 64px;
+        min-width: 64px;
+        height: 20px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        vertical-align: middle;
+        padding-left: 2px;
+    }    
+
+    .mt-hc {
+        border: 1px solid #D4D4D4;
+        text-align: center;
+        vertical-align: middle;
+        font-family: "Segoe UI",Tahoma,Thonburi,Arial,Verdana,sans-serif;
+        font-size: 10pt;
+        display: table-cell;
+        color: #949494;
+        background-color: #EDEBE9;
+        max-width: 64px;
+        min-width: 64px;
+        padding-left: 2px;
+    }
+
+    #mt-selection-highlight {
+        position: absolute;
+        border: 2px solid #217346;
+        z-index: 15;
+    }
+
+    #mt-input-edit {
+        font: normal 11pt Calibri,'Segoe UI',Calibri,Thonburi,Arial,Verdana,Sans-Serif,'Mongolian Baiti','Microsoft Yi Baiti','Javanese Text';
+        position: absolute;
+        z-index: 20;
         border-width: 0;
     }
 
-    #tablita input:focus {
+     input#mt-input-edit:focus {
         outline-width: 0;
     }
+
+
     </style>
 </head>
 <body>
-    <table id="tablita">
-        <thead></thead>
-        <tbody>
-            <tr>
-                <td>Any data</td>
-                <td>Any data</td>
-                <td>Any data</td>
-                <td>Any data</td>
-                <td>Any data</td>
-                <td>Any data</td>
-                <td>Any data</td>
-                <td>Any data</td>
-            </tr>
-            <tr>
-                <td>Any data</td>
-                <td>Any data</td>
-                <td>Any data</td>
-                <td>Any data</td>
-                <td>Any data</td>
-                <td>Any data</td>
-                <td>Any data</td>
-                <td>Any data</td>
-            </tr>
-            <tr>
-                <td>Any data</td>
-                <td>Any data</td>
-                <td>Any data</td>
-                <td>Any data</td>
-                <td>Any data</td>
-                <td>Any data</td>
-                <td>Any data</td>
-                <td>Any data</td>
-            </tr>
-        </tbody>
-    </table>
-    <button>HACK</button>
+    <div id="my-headers">
+        <div class="mt-hr">
+            <div class="mt-hc" >A</div>
+            <div class="mt-hc" >B</div>
+            <div class="mt-hc" >C</div>
+            <div class="mt-hc" >D</div>
+            <div class="mt-hc" >E</div>
+            <div class="mt-hc" >F</div>
+            <div class="mt-hc" >G</div>
+            <div class="mt-hc" >H</div>
+        </div>
+    </div>
+    
+    <div id="mytable">
+        <div class="mt-lr">
+            <div class="mt-rc" >Any data</div>
+            <div class="mt-rc" >Any data</div>
+            <div class="mt-rc" >Any data</div>
+            <div class="mt-rc" >Any data</div>
+            <div class="mt-rc" >Any data</div>
+            <div class="mt-rc" >Any data</div>
+            <div class="mt-rc" >Any data</div>
+            <div class="mt-rc" >Any data</div>
+        </div>
+        <div class="mt-lr">
+            <div class="mt-rc" >Any data</div>
+            <div class="mt-rc" >Any data</div>
+            <div class="mt-rc" >Any data</div>
+            <div class="mt-rc" >Any data</div>
+            <div class="mt-rc" >Any data</div>
+            <div class="mt-rc" >Any data</div>
+            <div class="mt-rc" >Any data</div>
+            <div class="mt-rc" >Any data</div>
+        </div>
+        <div class="mt-lr">
+            <div class="mt-rc" >Any data</div>
+            <div class="mt-rc" >Any data</div>
+            <div class="mt-rc" >Any data</div>
+            <div class="mt-rc" >Any data</div>
+            <div class="mt-rc" >Any data</div>
+            <div class="mt-rc" >Any data</div>
+            <div class="mt-rc" >Any data</div>
+            <div class="mt-rc" >Any data</div>
+        </div>
+    </div>
+    <div id="mt-selection-highlight"></div>
+
     <script src="editTableCell.js"></script>
     <script>
         (function(){
-            var table = document.getElementById("tablita");
-            editTableCell(table);
+            editDivTable(document.getElementById("mytable"))
         })();
     </script>
 </body>
